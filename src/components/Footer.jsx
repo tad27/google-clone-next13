@@ -3,8 +3,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-700">
-      <div className="border-b border-gray-200 py-5 px-8 text-center sm:text-left">
+    <footer className="bg-gray-100 text-gray-500">
+      <div className="border-b border-gray-200 py-3 px-8 text-sm text-center sm:text-left">
         United Kingdom
       </div>
       <div className="flex items-center justify-evenly xl:justify-between px-5 text-sm flex-wrap">

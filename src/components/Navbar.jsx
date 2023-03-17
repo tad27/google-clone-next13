@@ -20,7 +20,7 @@ function Navbar() {
         </Link>
       </div>
       <div className="flex-grow flex justify-end items-center gap-4">
-        <div className="flex gap-4">
+        <div className="flex gap-2">
           <Link
             className="hover:underline ease p-[5px] text-[13px]"
             href="https://mail.google.com/mail/&ogbl"
@@ -45,7 +45,7 @@ function Navbar() {
           </div>
           <Link
             href={"/"}
-            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 font-semibold text-slate-100 py-1.5 rounded whitespace-nowrap"
+            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 mx-1 text-sm font-semibold text-slate-100 py-2 rounded whitespace-nowrap"
           >
             Sign in
           </Link>
