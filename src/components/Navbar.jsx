@@ -4,37 +4,37 @@ import { TbGridDots } from "react-icons/tb";
 
 function Navbar() {
   return (
-    <header className="p-1.5 h-14 flex items-center border-b border-gray-100">
-      <div className="flex gap-4 pl-4 text-[#202124]">
+    <header className="p-1.5 h-[60px] flex items-center text-gray-700">
+      <div className="flex items-center gap-2.5 pl-4">
         <Link
-          className="hover:underline ease text-sm p-1.5"
+          className="hover:underline ease text-sm p-[5px]"
           href="https://about.google/?fg=1&utm_source=google-GB&utm_medium=referral&utm_campaign=hp-header"
         >
           About
         </Link>
         <Link
-          className="hover:underline ease text-sm p-1.5"
+          className="hover:underline ease text-sm p-[5px]"
           href="https://store.google.com/GB?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
         >
           Store
         </Link>
       </div>
-      <div className="flex-grow flex justify-end items-center gap-2">
+      <div className="flex-grow flex justify-end items-center gap-4">
         <div className="flex gap-4">
           <Link
-            className="hover:underline ease text-sm"
+            className="hover:underline ease p-[5px] text-[13px]"
             href="https://mail.google.com/mail/&ogbl"
           >
             Gmail
           </Link>
           <Link
-            className="hover:underline ease text-sm"
+            className="hover:underline ease p-[5px] text-[13px]"
             href="https://www.google.co.uk/imghp?hl=en&ogbl"
           >
             Images
           </Link>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mr-2">
           <div
             aria-label="Google Aps"
             title="Google Apps"
@@ -45,7 +45,7 @@ function Navbar() {
           </div>
           <Link
             href={"/"}
-            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 font-semibold text-slate-100 py-2 rounded-md whitespace-nowrap"
+            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 font-semibold text-slate-100 py-1.5 rounded whitespace-nowrap"
           >
             Sign in
           </Link>
