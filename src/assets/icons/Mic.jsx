@@ -1,6 +1,6 @@
 const Mic = () => (
   <svg
-    class="w-6 h-6"
+    className="w-6 h-6"
     fill="green"
     focusable="false"
     viewBox="0 0 24 24"

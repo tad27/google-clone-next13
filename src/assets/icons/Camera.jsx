@@ -3,7 +3,7 @@ import React from "react";
 function Camera() {
   return (
     <svg
-      class="w-6 h-6"
+      className="w-6 h-6"
       focusable="false"
       viewBox="0 0 192 192"
       xmlns="http://www.w3.org/2000/svg"
