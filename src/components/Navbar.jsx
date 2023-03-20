@@ -45,7 +45,7 @@ function Navbar() {
           </div>
           <Link
             href={"/"}
-            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 mx-1 text-sm font-semibold text-slate-100 py-2 rounded whitespace-nowrap"
+            className="bg-blue-600 hover:bg-blue-500 transition-colors px-6 mx-1 hover:shadow-md text-sm font-semibold text-slate-100 py-2 rounded whitespace-nowrap"
           >
             Sign in
           </Link>
