@@ -10,6 +10,7 @@ import Button from "@/components/Button";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
+  const RANDOM_WORD_API = "https://random-word-api.herokuapp.com/word";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,14 @@ export default function Home() {
 
     console.log(searchTerm);
     router.push(`/search?q=${mapSlugFromSearchTerm(searchTerm)}`);
+  };
+
+  const handleRandomSearch = async () => {
+    const res = await fetch(RANDOM_WORD_API);
+    const data = await res.json();
+
+    if (!data) return;
+    router.push(`/search/q=${data[0]}`);
   };
 
   return (
@@ -41,7 +50,7 @@ export default function Home() {
         />
         <div className="flex flex-wrap items-center justify-center gap-2">
           <Button onClick={handleSubmit}>Google Search</Button>
-          <Button>I'm Feeling Lucky</Button>
+          <Button onClick={handleRandomSearch}>I'm Feeling Lucky</Button>
         </div>
       </div>
     </main>
