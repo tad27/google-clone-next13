@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { TbSearch } from "react-icons/tb";
 import { IoCloseSharp } from "react-icons/io5";
 import Mic from "@/assets/icons/Mic";
 import Camera from "@/assets/icons/Camera";
 
 function SearchForm({ searchTerm, setSearchTerm, onSubmit }) {
+  const searchRef = useRef();
   const handleClear = () => {
     setSearchTerm("");
+    searchRef.current.focus();
   };
 
   return (
@@ -22,6 +24,7 @@ function SearchForm({ searchTerm, setSearchTerm, onSubmit }) {
         >
           <input
             onChange={(e) => setSearchTerm(e.target.value)}
+            ref={searchRef}
             className="w-full focus:outline-none py-2 bg-transparent"
             type="text"
             name="search"
