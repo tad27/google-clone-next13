@@ -14,12 +14,12 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const term = mapSlugFromSearchTerm(searchTerm);
 
-    // Don't submit if a user enters only a space
+    // Don't submit if a user doesn't provide a value or enters only a space
     if (!searchTerm.trim()) return;
 
-    console.log(searchTerm);
-    router.push(`/search?q=${mapSlugFromSearchTerm(searchTerm)}`);
+    router.push(`/search?q=${term}`);
   };
 
   const handleRandomSearch = async () => {
@@ -27,7 +27,7 @@ export default function Home() {
     const data = await res.json();
 
     if (!data) return;
-    router.push(`/search/q=${data[0]}`);
+    router.push(`/search?q=${data[0]}`);
   };
 
   return (
