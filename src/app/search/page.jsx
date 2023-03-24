@@ -1,15 +1,21 @@
 "use client";
 import React from "react";
 import { useSearchParams } from "next/navigation";
+import SearchResultsSection from "@/components/SearchResultsSection";
+import Sidebar from "@/components/Sidebar";
 
 function SearchResults() {
   const searchParams = useSearchParams();
   const value = searchParams.get("q");
-  console.log(value);
   return (
-    <section className="flex-grow">
-      <h1 className="text-bold text-blue-500">{value}</h1>
-    </section>
+    <>
+      <SearchResultsSection>
+        <section className="flex-grow">
+          Search Term: <strong>{value}</strong>
+        </section>
+      </SearchResultsSection>
+      <Sidebar>Sidebar</Sidebar>
+    </>
   );
 }
 

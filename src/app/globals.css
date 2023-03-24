@@ -5,3 +5,16 @@
 body {
   font-family: arial,sans-serif;
 }
+
+
+@layer utilities {
+  .wrapper {
+    @apply w-[1120px] mx-auto px-3;
+  }
+  .wrapper-fluid {
+    @apply w-[1420px] mx-auto px-3;
+  }
+  .max-content-width {
+    @apply max-w-[652px];
+  }
+}
