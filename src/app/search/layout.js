@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import SearchResultsNavBar from "@/components/SearchResultsNavBar";
 
 export const metadata = {
   title: "Search Result",
@@ -11,7 +12,7 @@ export default function SearchResultsLayout({ children }) {
   return (
     <>
       <header>
-        <Navbar />
+        <SearchResultsNavBar />
         {/* Header Options */}
       </header>
       <section className="flex-grow flex">

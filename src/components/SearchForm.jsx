@@ -5,7 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import Mic from "@/assets/icons/Mic";
 import Camera from "@/assets/icons/Camera";
 
-function SearchForm({ searchTerm, setSearchTerm, onSubmit }) {
+function SearchForm({ searchTerm, setSearchTerm, onSubmit, variant = 1 }) {
   const searchRef = useRef();
   const handleClear = () => {
     setSearchTerm("");
@@ -15,12 +15,14 @@ function SearchForm({ searchTerm, setSearchTerm, onSubmit }) {
   return (
     <div className="rounded-full border-2 border-gray-200 px-4 w-full max-w-2xl hover:shadow-google focus-within:shadow-google overflow-hidden">
       <div className="flex items-center">
-        <div className="py-1">
-          <TbSearch className="text-gray-400" size={20} />
+        <div className={`py-1 ${variant > 1 && "order-last"}`}>
+          <TbSearch className="text-gray-400" size={variant > 1 ? 24 : 20} />
         </div>
         <form
           onSubmit={onSubmit}
-          className="py-1 px-4 w-full overflow-hidden flex justify-center"
+          className={`px-4 w-full overflow-hidden flex justify-center ${
+            variant > 1 ? "" : "py-1"
+          }`}
         >
           <input
             onChange={(e) => setSearchTerm(e.target.value)}
